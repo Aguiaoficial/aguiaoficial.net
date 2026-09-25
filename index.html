@@ -109,7 +109,6 @@ select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='ht
 select:focus,input:focus,button:focus{border-color:#f59e0b;box-shadow:0 0 0 3px rgba(245,158,11,.2);outline:none}
 button:not(footer button){background:#f59e0b;color:#fff;font-weight:600;cursor:pointer;border:none}
 button:not(footer button):hover{background:#d97706}
-button.brown{background:#8B4513}button.brown:hover{background:#6B3A0F}
 button.whatsapp-suporte{background:#25d366;color:#fff;margin-top:15px}button.whatsapp-suporte:hover{background:#128c7e}
 button:disabled{background:#d1d5db;cursor:not-allowed}
 label{font-size:14px;font-weight:500;color:#374151;margin-bottom:6px;display:block}
@@ -118,7 +117,6 @@ label{font-size:14px;font-weight:500;color:#374151;margin-bottom:6px;display:blo
 .bonus-section ul{list-style:none;padding:0}
 .bonus-section li{margin-bottom:8px;font-size:14px;display:flex;gap:8px}
 .bonus-section li::before{content:"💎"}
-.sobre-content img,.palpite-icon img{display:block;margin:0 auto 12px;max-width:100px}
 .button-group{display:flex;gap:8px}
 h2{color:#f59e0b;font-size:20px;font-weight:600;margin-bottom:12px}
 h3{color:#374151;font-size:16px;font-weight:500;margin-bottom:10px}
@@ -175,9 +173,6 @@ th{background:#f9fafb;font-weight:600;color:#374151}
     <div id="palpites" class="visible">
       <div class="section">
         <h2>Gerar Palpites Águia Oficial</h2>
-        <div class="palpite-icon">
-          <img src="https://r2.dashmulti.com/app/aguiaoficial/logo.png" alt="Logo Águia Oficial" loading="lazy" width="100" height="100" onerror="this.src='https://r2.dashmulti.com/app/aguiaoficial/logo.png'">
-        </div>
         <label for="bancaSelect">Escolha a Banca:</label>
         <select id="bancaSelect">
           <option value="">Selecione uma banca</option>
@@ -190,7 +185,6 @@ th{background:#f9fafb;font-weight:600;color:#374151}
         <div id="bancaError" class="error hidden">Por favor, selecione uma banca.</div>
         <div class="button-group">
           <button id="gerarPalpites" disabled>Gerar Palpites</button>
-          <button onclick="window.open('https://chat.whatsapp.com/JfOVc7zS3aKLRIaZXF9gEX?s=sh&p=a&mlu=4','_blank')" class="brown">Palpites WhatsApp</button>
         </div>
       </div>
 
@@ -203,7 +197,6 @@ th{background:#f9fafb;font-weight:600;color:#374151}
             <tr><td><strong>5 Milhares</strong></td><td id="resMilhar" class="list-palpites">-</td></tr>
             <tr><td><strong>5 Centenas</strong></td><td id="resCentena" class="list-palpites">-</td></tr>
             <tr><td><strong>2 Dezenas</strong></td><td id="resDezena" class="list-palpites">-</td></tr>
-            <tr><td><strong>Grupo Principal</strong></td><td id="resGrupo">-</td></tr>
           </table>
         </div>
         <div class="puxadas">
@@ -222,9 +215,9 @@ th{background:#f9fafb;font-weight:600;color:#374151}
       
       <div class="bonus-section" style="margin-top:15px;border-left:4px solid #f59e0b">
         <h3 style="color:#f59e0b">🎁 Bônus Exclusivos Águia Oficial</h3>
-        <p><strong>Nosso aplicativo offers bônus imperdíveis:</strong></p>
+        <p><strong>Nosso aplicativo oferece bônus imperdíveis:</strong></p>
         <ul>
-          <li><strong>30% de bônus</strong> para NOVOS CADASTROS em depósitos de até R$ 500.</li>
+          <li><strong>30% de bônus</strong> para NOVOS CADASTROS em depósitos de até R$ 100.</li>
           <li><strong>15% de bônus</strong> Bônus Federal (Quarta-feira, Sábado e Domingo) na primeira recarga do dia.</li>
           <li><strong>10% de bônus</strong> Bônus Diário em todos os dias na primeira recarga do dia (mínimo R$ 10,00).</li>
         </ul>
@@ -338,7 +331,7 @@ function mudarAba(aba){
 }
 
 function sortearBichoEDezena(){var b=bichosInfo[Math.floor(Math.random()*bichosInfo.length)];var d=b.dezenas[Math.floor(Math.random()*b.dezenas.length)];return{bicho:b,dezena:d}}
-function gerarDadosPalpite(){var milhares=[],centenas=[],dezenas=[];for(var i=0;i<5;i++){var r=sortearBichoEDezena();milhares.push(Math.floor(10+Math.random()*90).toString()+r.dezena)}for(var i=0;i<5;i++){var r=sortearBichoEDezena();centenas.push(Math.floor(Math.random()*10).toString()+r.dezena)}for(var i=0;i<2;i++){var r=sortearBichoEDezena();dezenas.push(r.dezena)}var b=bichosInfo[Math.floor(Math.random()*bichosInfo.length)];return{milhar:milhares.join(" - "),centena:centenas.join(" - "),dezena:dezenas.join(" - "),grupo:b.grupo+" - "+b.nome,puxada:b.nome+" puxa -> "+b.puxa}}
+function gerarDadosPalpite(){var milhares=[],centenas=[],dezenas=[];for(var i=0;i<5;i++){var r=sortearBichoEDezena();milhares.push(Math.floor(10+Math.random()*90).toString()+r.dezena)}for(var i=0;i<5;i++){var r=sortearBichoEDezena();centenas.push(Math.floor(Math.random()*10).toString()+r.dezena)}for(var i=0;i<2;i++){var r=sortearBichoEDezena();dezenas.push(r.dezena)}var b=bichosInfo[Math.floor(Math.random()*bichosInfo.length)];return{milhar:milhares.join(" - "),centena:centenas.join(" - "),dezena:dezenas.join(" - "),puxada:b.nome+" puxa -> "+b.puxa}}
 function obterDataAtualFormatada(){var d=new Date();return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()}
 
 var bancaSelect=document.getElementById("bancaSelect");
@@ -349,7 +342,7 @@ var blocoResultado=document.getElementById("resultadoPalpiteBlock");
 bancaSelect.addEventListener("change",function(){if(this.value!==""){btnGerar.removeAttribute("disabled");bancaError.classList.add("hidden");carregarOuExibirPalpite(this.value)}else{btnGerar.setAttribute("disabled","true");blocoResultado.classList.add("hidden")}});
 
 function carregarOuExibirPalpite(banca){var hoje=obterDataAtualFormatada();var chave="palpite_"+banca.replace(/\s+/g,"_").toLowerCase();var armaz=localStorage.getItem(chave);if(armaz){var dados=JSON.parse(armaz);if(dados.data===hoje){mostrarPalpiteNaTela(banca,dados);return}else{localStorage.removeItem(chave)}}blocoResultado.classList.add("hidden")}
-function mostrarPalpiteNaTela(banca,dados){document.getElementById("tituloResultadoBanca").innerText="Palpites para "+banca;document.getElementById("resMilhar").innerText=dados.milhar;document.getElementById("resCentena").innerText=dados.centena;document.getElementById("resDezena").innerText=dados.dezena;document.getElementById("resGrupo").innerText=dados.grupo;document.getElementById("resPuxadaTexto").innerText=dados.puxada;blocoResultado.classList.remove("hidden")}
+function mostrarPalpiteNaTela(banca,dados){document.getElementById("tituloResultadoBanca").innerText="Palpites para "+banca;document.getElementById("resMilhar").innerText=dados.milhar;document.getElementById("resCentena").innerText=dados.centena;document.getElementById("resDezena").innerText=dados.dezena;document.getElementById("resPuxadaTexto").innerText=dados.puxada;blocoResultado.classList.remove("hidden")}
 
 btnGerar.addEventListener("click",function(){var banca=bancaSelect.value;if(!banca){bancaError.classList.remove("hidden");return}var hoje=obterDataAtualFormatada();var chave="palpite_"+banca.replace(/\s+/g,"_").toLowerCase();var novos=gerarDadosPalpite();novos.data=hoje;localStorage.setItem(chave,JSON.stringify(novos));mostrarPalpiteNaTela(banca,novos)});
 </script>
