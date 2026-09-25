@@ -22,17 +22,45 @@
 <link rel="dns-prefetch" href="https://r2.dashmulti.com">
 <link rel="dns-prefetch" href="https://github.com">
 
-<!-- Script Analytics Assíncrono -->
-<script defer src="https://www.googletagmanager.com/gtag/js?id=G-V0N3WWWQ7V"></script>
+<!-- Rastreamento Otimizado (Google Analytics, GTM e Facebook Pixel com atraso para performance) -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag("js", new Date());
-  gtag("config", "G-V0N3WWWQ7V");
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      // 1. Google Analytics (gtag.js)
+      var gtagScript = document.createElement('script');
+      gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-V0N3WWWQ7V';
+      gtagScript.async = true;
+      document.head.appendChild(gtagScript);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-V0N3WWWQ7V');
+
+      // 2. Google Tag Manager (GTM)
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5MPCZPDF');
+
+      // 3. Meta / Facebook Pixel
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      
+      fbq('init', '893'); // Altere o ID '893' se o seu Pixel tiver outro número completo
+      fbq('track', 'PageView');
+    }, 1200); // Aguarda 1.2s após o carregamento total para injetar os scripts
+  });
 </script>
 
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://aguiaoficial.net https://app.aguiaoficial.vip https://app.aguiaoficial.com https://github.com https://api.whatsapp.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; frame-src https://app.aguiaoficial.vip https://app.aguiaoficial.com; img-src 'self' data: *; connect-src 'self' https://api.whatsapp.com https://www.googletagmanager.com;">
-
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://aguiaoficial.net https://app.aguiaoficial.vip https://app.aguiaoficial.com https://github.com https://api.whatsapp.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; frame-src https://app.aguiaoficial.vip https://app.aguiaoficial.com; img-src 'self' data: * https://www.facebook.com; connect-src 'self' https://api.whatsapp.com https://www.googletagmanager.com https://www.facebook.com;">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Águia Oficial - Cadastros novos ganham 30% de bônus">
 <meta property="og:description" content="Águia Oficial - Ganhe 30% de bônus em novos cadastros! Aposte em bancas como PT Rio, Look GO e mais.">
@@ -138,9 +166,9 @@ th{background:#f9fafb;font-weight:600;color:#374151}
 
 <div id="main-content">
   <div id="jogar">
-    <iframe id="embeddedIframe" allow="clipboard-read; clipboard-write" width="100%" height="600" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals allow-clipboard-read allow-clipboard-write">
-      <p>Seu navegador não suporta iframes. Acesse a plataforma oficial: <a href="https://app.aguiaoficial.vip/pr/ZXbjMC6Q" rel="noopener noreferrer">Águia Oficial App</a></p>
-    </iframe>
+<iframe id="embeddedIframe" title="Águia Oficial" allow="clipboard-read; clipboard-write" width="100%" height="600" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals allow-clipboard-read allow-clipboard-write" src="https://app.aguiaoficial.vip/pr/ZXbjMC6Q?t=1790356580658">
+  <p>Seu navegador não suporta iframes. Acesse a plataforma oficial: <a href="https://app.aguiaoficial.vip/pr/ZXbjMC6Q" rel="noopener noreferrer">Águia Oficial App</a></p>
+</iframe>
   </div>
 
   <div id="palpites-container">
