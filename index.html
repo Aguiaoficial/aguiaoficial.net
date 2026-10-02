@@ -19,14 +19,18 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Águia Oficial - Aposte com confiança!">
 <meta property="og:description" content="Águia Oficial é uma plataforma voltada para apostas online, oferecendo diferentes modalidades, informações e opções de entretenimento. Acesse de forma prática, rápida e segura e acompanhe as principais novidades do mundo das apostas.">
-<meta property="og:image" content="./aguiaoficialapp.png">
+<meta property="og:image" content="https://aguiaoficial.net/aguiaoficialapp.png?v=1">
+<meta property="og:image:secure_url" content="https://aguiaoficial.net/aguiaoficialapp.png?v=1">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:url" content="https://aguiaoficial.net/">
 
 <!-- META TAGS PARA TWITTER / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Águia Oficial - Aposte com confiança!">
 <meta name="twitter:description" content="Águia Oficial é uma plataforma voltada para apostas online, oferecendo diferentes modalidades, informações e opções de entretenimento. Acesse de forma prática, rápida e segura e acompanhe as principais novidades do mundo das apostas.">
-<meta name="twitter:image" content="./aguiaoficialapp.png">
+<meta name="twitter:image" content="https://aguiaoficial.net/aguiaoficialapp.png?v=1">
 
 <!-- Otimização de Conexões Externas (Preconnect / DNS-Prefetch) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,9 +71,9 @@
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
       
-      fbq('init', '893'); // Altere o ID '893' se o seu Pixel tiver outro número completo
+      fbq('init', '893');
       fbq('track', 'PageView');
-    }, 1200); // Aguarda 1.2s após o carregamento total para injetar os scripts
+    }, 1200);
   });
 </script>
 
@@ -289,13 +293,11 @@ function fecharBanner(){
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-  // Carrega iframe de jogos sem travar a renderização inicial do DOM
   var i = document.getElementById("embeddedIframe");
   if (i) {
     i.src = "https://app.aguiaoficial.vip/pr/ZXbjMC6Q?t=" + Date.now();
   }
 
-  // Exibe o banner apenas após 10 segundos
   setTimeout(function() {
     var banner = document.getElementById("overlay-banner");
     if (banner) {
