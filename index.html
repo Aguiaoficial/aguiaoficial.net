@@ -12,10 +12,12 @@
   <meta name="keywords" content="águia oficial, aguia oficial, águia oficial vip, apostas online, jogo do bicho, pt rio, look go, lotep, palpites">
   <link rel="canonical" href="https://aguiaoficial.net/">
 
+  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="512x512" href="./icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./icon.png">
   <link rel="apple-touch-icon" href="./icon.png">
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Águia Oficial">
@@ -29,17 +31,20 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Águia Oficial - Plataforma de Apostas Online">
 
+  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Águia Oficial - Aposte com confiança!">
   <meta name="twitter:description" content="Águia Oficial é a plataforma oficial de apostas online no Brasil com PIX 24h, bônus exclusivos e total segurança.">
   <meta name="twitter:image" content="https://aguiaoficial.net/aguiaoficialapp.png">
 
+  <!-- Preconnect / DNS-Prefetch -->
   <link rel="preconnect" href="https://app.aguiaoficial.vip" crossorigin>
   <link rel="dns-prefetch" href="https://app.aguiaoficial.vip">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link rel="dns-prefetch" href="https://connect.facebook.net">
   <link rel="dns-prefetch" href="https://raw.githubusercontent.com">
 
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -55,29 +60,108 @@
       "telephone": "+5583993370071",
       "contactType": "customer service",
       "availableLanguage": "Portuguese"
-    },
-    "sameAs": []
+    }
   }
   </script>
 
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://aguiaoficial.net https://app.aguiaoficial.vip https://app.aguiaoficial.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://connect.facebook.net; style-src 'self' 'unsafe-inline'; frame-src https://app.aguiaoficial.vip https://app.aguiaoficial.com; img-src 'self' data: https: https://raw.githubusercontent.com https://www.facebook.com; connect-src 'self' https://www.googletagmanager.com https://www.facebook.com https://api.whatsapp.com;">
 
   <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0f0f0f;color:#fff;overflow:hidden}
-    .iframe-wrapper{position:fixed;inset:0width:100%;height:100%;z-index:1}
-    iframe{width:100%;height:100%;border:0;display:block}
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background: #0f0f0f;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .iframe-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
     /* Overlay Banner */
-    .overlay-modal{position:fixed;inset:0;background:rgba(0,0,0,.8);display:none;align-items:center;justify-content:center;z-index:99999;padding:16px}
-    .overlay-content{position:relative;max-width:90%;max-height:90%}
-    .overlay-content img{max-width:100%;max-height:80vh;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,.6);display:block}
-    .overlay-close{position:absolute;top:-14px;right:-14px;width:38px;height:38px;background:#ef4444;color:#fff;border:2px solid #fff;border-radius:50%;font-size:22px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.4);line-height:1;z-index:100000}
-    .overlay-close:hover{background:#dc2626}
-    .noscript{padding:20px;text-align:center;background:#1a1a1a}
+    .overlay-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      padding: 16px;
+    }
+
+    .overlay-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .overlay-content img {
+      max-width: 100%;
+      max-height: 80vh;
+      border-radius: 12px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+      display: block;
+    }
+
+    .overlay-close {
+      position: absolute;
+      top: -14px;
+      right: -14px;
+      width: 38px;
+      height: 38px;
+      background: #ef4444;
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      font-size: 22px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      line-height: 1;
+      z-index: 100000;
+    }
+
+    .overlay-close:hover {
+      background: #dc2626;
+    }
+
+    .noscript {
+      padding: 20px;
+      text-align: center;
+      background: #1a1a1a;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Overlay promocional fechável -->
   <div id="overlay-banner" class="overlay-modal" role="dialog" aria-modal="true" aria-label="Promoção">
     <div class="overlay-content">
       <button class="overlay-close" onclick="fecharBanner()" aria-label="Fechar">&times;</button>
@@ -98,6 +182,7 @@
     </div>
   </noscript>
 
+  <!-- Conteúdo principal: iframe em tela cheia -->
   <main class="iframe-wrapper">
     <iframe 
       id="embeddedIframe"
@@ -122,12 +207,14 @@
         iframe.src = 'https://app.aguiaoficial.vip/pr/ZXbjMC6Q?t=' + Date.now();
       }
 
+      // Mostra o banner após 10 segundos
       setTimeout(function () {
         const banner = document.getElementById('overlay-banner');
         if (banner) banner.style.display = 'flex';
       }, 10000);
     });
 
+    // Tracking adiado
     window.addEventListener('load', function () {
       setTimeout(function () {
         // Google Analytics
