@@ -12,12 +12,10 @@
   <meta name="keywords" content="águia oficial, aguia oficial, águia oficial vip, apostas online, jogo do bicho, pt rio, look go, lotep, palpites">
   <link rel="canonical" href="https://aguiaoficial.net/">
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="512x512" href="./icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./icon.png">
   <link rel="apple-touch-icon" href="./icon.png">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Águia Oficial">
@@ -31,20 +29,17 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Águia Oficial - Plataforma de Apostas Online">
 
-  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Águia Oficial - Aposte com confiança!">
   <meta name="twitter:description" content="Águia Oficial é a plataforma oficial de apostas online no Brasil com PIX 24h, bônus exclusivos e total segurança.">
   <meta name="twitter:image" content="https://aguiaoficial.net/aguiaoficialapp.png">
 
-  <!-- Preconnect / DNS-Prefetch -->
   <link rel="preconnect" href="https://app.aguiaoficial.vip" crossorigin>
   <link rel="dns-prefetch" href="https://app.aguiaoficial.vip">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link rel="dns-prefetch" href="https://connect.facebook.net">
   <link rel="dns-prefetch" href="https://raw.githubusercontent.com">
 
-  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -97,7 +92,6 @@
       display: block;
     }
 
-    /* Overlay Banner */
     .overlay-modal {
       position: fixed;
       top: 0;
@@ -161,7 +155,6 @@
 </head>
 <body>
 
-  <!-- Overlay promocional fechável -->
   <div id="overlay-banner" class="overlay-modal" role="dialog" aria-modal="true" aria-label="Promoção">
     <div class="overlay-content">
       <button class="overlay-close" onclick="fecharBanner()" aria-label="Fechar">&times;</button>
@@ -182,7 +175,6 @@
     </div>
   </noscript>
 
-  <!-- Conteúdo principal: iframe em tela cheia -->
   <main class="iframe-wrapper">
     <iframe 
       id="embeddedIframe"
@@ -207,17 +199,14 @@
         iframe.src = 'https://app.aguiaoficial.vip/pr/ZXbjMC6Q?t=' + Date.now();
       }
 
-      // Mostra o banner após 10 segundos
       setTimeout(function () {
         const banner = document.getElementById('overlay-banner');
         if (banner) banner.style.display = 'flex';
       }, 10000);
     });
 
-    // Tracking adiado
     window.addEventListener('load', function () {
       setTimeout(function () {
-        // Google Analytics
         const gtagScript = document.createElement('script');
         gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-V0N3WWWQ7V';
         gtagScript.async = true;
@@ -228,7 +217,6 @@
         gtag('js', new Date());
         gtag('config', 'G-V0N3WWWQ7V');
 
-        // Google Tag Manager
         (function(w,d,s,l,i){
           w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
           var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
@@ -236,7 +224,6 @@
           f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-5MPCZPDF');
 
-        // Meta Pixel
         !function(f,b,e,v,n,t,s){
           if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
           if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
